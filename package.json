@@ -1,0 +1,72 @@
+{
+  "name": "clz",
+  "version": "1.0.3",
+  "description": "Serverless & Beautiful third-part comment system base on lean cloud.",
+  "license": "MIT",
+  "main": "dist/clz.min.js",
+  "browser": "dist/clz.min.js",
+  "unpkg": "dist/clz.min.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "rollup -c -w",
+    "clean": "rimraf -rf dist",
+    "lint-staged": "lint-staged",
+    "test": "npm run build & jest",
+    "build": "npm run clean && rollup -c",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "leancloud-storage": "^4.2.0"
+  },
+  "keywords": [
+    "comment",
+    "message",
+    "board"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@types/jest": "^24.0.18",
+    "husky": "^3.0.5",
+    "jest": "^24.9.0",
+    "jest-electron": "^0.1.7",
+    "jest-less-loader": "^0.1.0",
+    "lint-staged": "^9.3.0",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.24.0",
+    "rollup-plugin-less": "^1.1.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-uglify": "^6.0.3",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  },
+  "jest": {
+    "runner": "jest-electron/runner",
+    "testEnvironment": "jest-electron/environment",
+    "preset": "ts-jest",
+    "collectCoverage": true,
+    "transform": {
+      ".+\\.less$": "jest-less-loader"
+    },
+    "testRegex": "(/__tests__/.*\\.(test|spec))\\.ts$",
+    "collectCoverageFrom": [
+      "src/**/*.ts"
+    ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

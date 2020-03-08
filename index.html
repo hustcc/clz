@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+	<title>hustcc/clz —— 三方趣味评论系统</title>
+	<meta name="description" content="Serverless & Beautiful third-part comment system base on lean cloud.">
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		html, body {
+			overflow-x: hidden;
+		}
+
+		body {
+			height: 1200px;
+		}
+
+		.github-url {
+			color: #a6619c;
+			position: absolute;
+			top: 16px;
+			left: 16px;
+			text-decoration: none;
+		}
+
+		.notice {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 100px;
+			font-size: 32px;
+			color: #af9797;
+		}
+	</style>
+</head>
+<body>
+	<a class="github-url" href="https://github.com/hustcc/clz">clz</a>
+	<div class="notice">试试双击，即可留言！</div>
+	<script src="./dist/clz.min.js"></script>
+	<script>
+		var c = new CLZ({
+      appId: 'KO2rVJq8lMvgaYkEMhrUxgGn-gzGzoHsz',
+      appKey: '3UEp42VPz1kc731PeKDYKY7Q',
+      serverURLs: 'https://ko2rvjq8.lc-cn-n1-shared.com',
+			page: 'clz',
+		});
+
+		c.launch();
+	</script>
+</body>
+</html>

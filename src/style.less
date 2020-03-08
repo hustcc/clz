@@ -1,0 +1,62 @@
+.clz-container {
+  font-size: 12px;
+  z-index: 99999;
+
+  // 输入框
+  .clz-input {
+    display: none;
+    width: 160px;
+    height: 36px;
+    position: fixed;
+    z-index: 10000;
+
+    //left: 100px;
+    //top: 100px;
+    // background
+
+    textarea {
+      box-shadow: 1px 1px 3px 1px grey;
+
+      border: 0;
+      border-radius: 4px;
+      background-color: rgba(241,241,241,.98);
+      padding: 4px;
+      resize: none;
+
+      width: 160px;
+      height: 36px;
+      outline: none;
+    }
+  }
+
+  // 显示消息的弹框
+  .clz-message {
+    display: inline-block;
+    position: fixed;
+
+    // left, top
+    max-width: 120px;
+    padding: 4px 6px;
+    border-radius: 4px;
+
+    opacity: 0.7;
+    z-index: 10000;
+  }
+
+  // 小圆点
+  .clz-comment-dot {
+    display: inline-block;
+    position: absolute;
+
+    // left, top
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+
+    border-radius: 2px;
+    box-shadow: 0 0 3px grey;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+}
