@@ -19,10 +19,10 @@ $ npm i --save clz
 ## Usage
 
 ```ts
-import Clz from 'clz';
+import CLZ from 'clz';
 
 // 注意换成你自己的，去 leancloud 免费创建即可获取
-const c = new Clz({
+const c = new CLZ({
   appId: 'KO2rVJq8lMvgaYkEMhrUxgGn-gzGzoHsz',
   appKey: '3UEp42VPz1kc731PeKDYKY7Q',
   serverURLs: 'https://ko2rvjq8.lc-cn-n1-shared.com',

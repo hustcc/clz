@@ -1,6 +1,6 @@
 {
   "name": "clz",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Serverless & Beautiful third-part comment system base on lean cloud.",
   "license": "MIT",
   "main": "dist/clz.min.js",

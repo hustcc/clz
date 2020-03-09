@@ -26,12 +26,16 @@ export class Clz {
 
     // 加载成功，初始化
     const { appId, appKey, serverURLs } = this.option;
-    // @ts-ignore
-    AV.init({
-      appId,
-      appKey,
-      serverURLs,
-    });
+
+    // 防止多次 init 报错
+    try {
+      AV.init({
+        appId,
+        appKey,
+        serverURLs,
+      });
+    } catch(e) {}
+
 
     // 新建 dom
     this.dom = new DOM(this.option, (comment: Comment) => {
